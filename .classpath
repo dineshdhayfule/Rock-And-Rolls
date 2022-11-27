@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gif"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/VINOD/Downloads/rs2xml.jar"/>
+	<classpathentry kind="lib" path="C:/Users/VINOD/Downloads/activation-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/VINOD/Downloads/javax.mail-1.6.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/VINOD/Downloads/jcalendar-1.4.zip"/>
+	<classpathentry kind="lib" path="C:/Users/VINOD/Downloads/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/VINOD/Downloads/mysql-connector-java-5.1.6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
