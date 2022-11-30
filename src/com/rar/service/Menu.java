@@ -26,10 +26,13 @@ import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import java.awt.CardLayout;
 import java.awt.GridLayout;
+import javax.swing.JCheckBox;
 
 public class Menu extends JFrame {
 	int frenchFriesQty = 0;
-
+	
+	//JCheckBox cb12 , cb11 , cb10 , cb9 , cb8 , cb7 , cb6 , cb5 , cb4 , cb3 , cb2 , cb1;
+	
 	int q = 1; //int pr1 = 1; int pr2 = 1; int pr3 = 1; int pr4 = 1; int pr5 = 1; int pr6 = 1; int pr7 = 1; int pr8 = 1; int pr9 = 1; int pr10 = 1; int pr11 = 1; int pr12 = 1;
 //	int tp1; int tp2; int tp3; int tp4; int tp5; int tp6; int tp7; int tp8; int tp9; int tp10; int tp11; int tp12; int gtp;
 	
@@ -66,6 +69,37 @@ public class Menu extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		Color c = new Color(116 , 49 , 249);
+		
+		JPanel panel_5 = new JPanel();
+		panel_5.setBounds(717, 448, 337, 154);
+		contentPane.add(panel_5);
+		panel_5.setLayout(null);
+		
+		JButton btnNewButton_10 = new JButton("Pay Bill");
+		btnNewButton_10.setBounds(120, 120, 89, 23);
+		panel_5.add(btnNewButton_10);
+		btnNewButton_10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Manager_Page mp = new Manager_Page(tnum , gtp);
+				mp.setVisible(true);
+			}
+		});
+		btnNewButton_10.setFont(new Font("Comic Sans MS", Font.BOLD, 15));
+		
+		JLabel lblNewLabel_6 = new JLabel("Total ");
+		lblNewLabel_6.setBounds(20, 33, 154, 31);
+		panel_5.add(lblNewLabel_6);
+		lblNewLabel_6.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
+		
+		
+		JLabel lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setBounds(152, 37, 145, 27);
+		panel_5.add(lblNewLabel_5);
+		
+		JLabel lblNewLabel_9 = new JLabel("");
+		lblNewLabel_9.setIcon(new ImageIcon("G:\\eclipse-workspace\\Rock And Rolls\\Images\\background1\\bg10_1.png"));
+		lblNewLabel_9.setBounds(0, 0, 337, 154);
+		panel_5.add(lblNewLabel_9);
 				
 				
 				
@@ -88,6 +122,30 @@ public class Menu extends JFrame {
 		lblNewLabel_7.setBounds(10, 24, 190, 27);
 		panel.add(lblNewLabel_7);
 		lblNewLabel_7.setText(tnum);
+		
+		JButton btnNewButton_11 = new JButton("LogOut");
+		btnNewButton_11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Login_Page lp = new Login_Page();
+				lp.setVisible(true);
+				setVisible(false);
+			}
+		});
+		btnNewButton_11.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
+		btnNewButton_11.setBounds(64, 539, 136, 40);
+		panel.add(btnNewButton_11);
+		
+		JButton btnNewButton_12 = new JButton("");
+		btnNewButton_12.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Login_Page lp = new Login_Page();
+				lp.setVisible(true);
+				setVisible(false);
+			}
+		});
+		btnNewButton_12.setIcon(new ImageIcon("G:\\eclipse-workspace\\Rock And Rolls\\Images\\Icons\\logout1.png"));
+		btnNewButton_12.setBounds(10, 539, 48, 40);
+		panel.add(btnNewButton_12);
 		//Color c = new Color(116 , 49 , 249);
 		
 		JPanel panel_1 = new JPanel();
@@ -255,6 +313,7 @@ public class Menu extends JFrame {
 		
 		// non veg rolls
 		JButton btnNewButton = new JButton("Order");
+		btnNewButton.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String q = JOptionPane.showInputDialog(contentPane ,"Enter Quntity" , "1");
@@ -272,6 +331,7 @@ public class Menu extends JFrame {
 		panel_4.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Order");
+		btnNewButton_1.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String q = JOptionPane.showInputDialog(contentPane ,"Enter Quntity" , "1");
@@ -289,6 +349,7 @@ public class Menu extends JFrame {
 		panel_4.add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("Order");
+		btnNewButton_2.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String q = JOptionPane.showInputDialog(contentPane ,"Enter Quntity" , "1");
@@ -307,6 +368,7 @@ public class Menu extends JFrame {
 		panel_4.add(btnNewButton_2);
 		
 		JButton btnOreder = new JButton("Order");
+		btnOreder.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
 		btnOreder.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String q = JOptionPane.showInputDialog(contentPane ,"Enter Quntity" , "1");
@@ -326,6 +388,7 @@ public class Menu extends JFrame {
 		panel_4.add(btnOreder);
 		
 		JButton btnOreder_1 = new JButton("Order");
+		btnOreder_1.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
 		btnOreder_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String q = JOptionPane.showInputDialog(contentPane ,"Enter Quntity" , "1");
@@ -344,6 +407,7 @@ public class Menu extends JFrame {
 		panel_4.add(btnOreder_1);
 		
 		JButton btnOreder_2 = new JButton("Order");
+		btnOreder_2.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
 		btnOreder_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String q = JOptionPane.showInputDialog(contentPane ,"Enter Quntity" , "1");
@@ -360,6 +424,11 @@ public class Menu extends JFrame {
 		});
 		btnOreder_2.setBounds(339, 459, 89, 23);
 		panel_4.add(btnOreder_2);
+		
+		JLabel lblNewLabel_12 = new JLabel("");
+		lblNewLabel_12.setIcon(new ImageIcon("G:\\eclipse-workspace\\Rock And Rolls\\Images\\background1\\bg12.jpg"));
+		lblNewLabel_12.setBounds(0, 0, 467, 485);
+		panel_4.add(lblNewLabel_12);
 //
 //		gtp = tp1+tp2;
 //		System.out.println(tp1+tp2);
@@ -535,6 +604,7 @@ public class Menu extends JFrame {
 														//veg rolls
 														
 														JButton btnNewButton_4 = new JButton("Order");
+														btnNewButton_4.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
 														btnNewButton_4.addActionListener(new ActionListener() {
 															public void actionPerformed(ActionEvent e) {
 																String q = JOptionPane.showInputDialog(contentPane ,"Enter Quntity" , "1");
@@ -554,6 +624,7 @@ public class Menu extends JFrame {
 														panel_4_1.add(btnNewButton_4);
 														
 														JButton btnNewButton_5 = new JButton("Order");
+														btnNewButton_5.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
 														btnNewButton_5.addActionListener(new ActionListener() {
 															public void actionPerformed(ActionEvent e) {
 																String q = JOptionPane.showInputDialog(contentPane ,"Enter Quntity" , "1");
@@ -573,6 +644,7 @@ public class Menu extends JFrame {
 														panel_4_1.add(btnNewButton_5);
 														
 														JButton btnNewButton_6 = new JButton("Order");
+														btnNewButton_6.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
 														btnNewButton_6.addActionListener(new ActionListener() {
 															public void actionPerformed(ActionEvent e) {
 																String q = JOptionPane.showInputDialog(contentPane ,"Enter Quntity" , "1");
@@ -592,6 +664,7 @@ public class Menu extends JFrame {
 														panel_4_1.add(btnNewButton_6);
 														
 														JButton btnNewButton_7 = new JButton("Order");
+														btnNewButton_7.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
 														btnNewButton_7.addActionListener(new ActionListener() {
 															public void actionPerformed(ActionEvent e) {
 																String q = JOptionPane.showInputDialog(contentPane ,"Enter Quntity" , "1");
@@ -611,6 +684,7 @@ public class Menu extends JFrame {
 														panel_4_1.add(btnNewButton_7);
 														
 														JButton btnNewButton_8 = new JButton("Order");
+														btnNewButton_8.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
 														btnNewButton_8.addActionListener(new ActionListener() {
 															public void actionPerformed(ActionEvent e) {
 																String q = JOptionPane.showInputDialog(contentPane ,"Enter Quntity" , "1");
@@ -630,6 +704,7 @@ public class Menu extends JFrame {
 														panel_4_1.add(btnNewButton_8);
 														
 														JButton btnNewButton_9 = new JButton("Order");
+														btnNewButton_9.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
 														btnNewButton_9.addActionListener(new ActionListener() {
 															public void actionPerformed(ActionEvent e) {
 																String q = JOptionPane.showInputDialog(contentPane ,"Enter Quntity" , "1");
@@ -647,6 +722,11 @@ public class Menu extends JFrame {
 														});
 														btnNewButton_9.setBounds(339, 440, 89, 23);
 														panel_4_1.add(btnNewButton_9);
+														
+														JLabel lblNewLabel_13 = new JLabel("");
+														lblNewLabel_13.setIcon(new ImageIcon("G:\\eclipse-workspace\\Rock And Rolls\\Images\\background1\\bg12_2.jpg"));
+														lblNewLabel_13.setBounds(0, 0, 467, 477);
+														panel_4_1.add(lblNewLabel_13);
 														
 														
 														JButton btnNewButton_1_1_1 = new JButton("");
@@ -676,6 +756,66 @@ public class Menu extends JFrame {
 														panel_2.setBounds(717, 0, 337, 438);
 														contentPane.add(panel_2);
 														panel_2.setLayout(null);
+														
+//														cb12 = new JCheckBox("");
+//														cb12.setBounds(273, 380, 21, 23);
+//														cb12.setVisible(false);
+//														panel_2.add(cb12);
+//														
+//														cb11 = new JCheckBox("");
+//														cb11.setBounds(273, 352, 21, 23);
+//														cb11.setVisible(false);
+//														panel_2.add(cb11);
+//														
+//														cb10 = new JCheckBox("");
+//														cb10.setBounds(273, 320, 21, 23);
+//														cb10.setVisible(false);
+//														panel_2.add(cb10);
+//														
+//														cb9 = new JCheckBox("");
+//														cb9.setBounds(273, 290, 21, 23);
+//														cb9.setVisible(false);
+//														panel_2.add(cb9);
+//														
+//														cb8 = new JCheckBox("");
+//														cb8.setBounds(273, 260, 21, 23);
+//														cb8.setVisible(false);
+//														panel_2.add(cb8);
+//														
+//														cb7 = new JCheckBox("");
+//														cb7.setBounds(273, 230, 21, 23);
+//														cb7.setVisible(false);
+//														panel_2.add(cb7);
+//														
+//														cb6 = new JCheckBox("");
+//														cb6.setBounds(273, 200, 21, 23);
+//														cb6.setVisible(false);
+//														panel_2.add(cb6);
+//														
+//														cb5 = new JCheckBox("");
+//														cb5.setBounds(273, 170, 21, 23);
+//														cb5.setVisible(false);
+//														panel_2.add(cb5);
+//														
+//														cb4 = new JCheckBox("");
+//														cb4.setBounds(273, 140, 21, 23);
+//														cb4.setVisible(false);
+//														panel_2.add(cb4);
+//														
+//														cb3 = new JCheckBox("");
+//														cb3.setBounds(273, 110, 21, 23);
+//														cb3.setVisible(false);
+//														panel_2.add(cb3);
+//														
+//														cb2 = new JCheckBox("");
+//														cb2.setBounds(273, 80, 21, 23);
+//														cb2.setVisible(false);
+//														panel_2.add(cb2);
+//														
+//														cb1 = new JCheckBox("");
+//														cb1.setBounds(273, 47, 21, 23);
+//														cb1.setVisible(false);
+//														panel_2.add(cb1);
 														
 														JLabel i1 = new JLabel("");
 														i1.setFont(new Font("Comic Sans MS", Font.BOLD, 11));
@@ -744,7 +884,7 @@ public class Menu extends JFrame {
 														panel_2.add(i12);
 														
 														JLabel p1 = new JLabel("");
-														p1.setBounds(190, 50, 95, 20);
+														p1.setBounds(190, 50, 40, 20);
 														panel_2.add(p1);
 														
 														JLabel p2 = new JLabel("");
@@ -791,56 +931,73 @@ public class Menu extends JFrame {
 														p12.setBounds(190, 380, 40, 20);
 														panel_2.add(p12);
 														
+														JLabel lblNewLabel_10 = new JLabel("");
+														lblNewLabel_10.setIcon(new ImageIcon("G:\\eclipse-workspace\\Rock And Rolls\\Images\\background1\\bg9.jpg"));
+														lblNewLabel_10.setBounds(0, 0, 337, 438);
+														panel_2.add(lblNewLabel_10);
+														
 														
 														class rough1{
 															public  void tp(String s , String p) {
 																if(i1.getText().equals("") && p1.getText().equals("")) {
 																	i1.setText(s);
 																	p1.setText(p);
+																	cb1.setVisible(true);
 																	//q1.setText(""+q);
 																}else if(i2.getText().equals("") && p2.getText().equals("")){
 																	i2.setText(s);
 																	p2.setText(p);
+																	cb2.setVisible(true);
 																	//q2.setText(""+q);
 																}else if(i3.getText().equals("") && p3.getText().equals("")){
 																	i3.setText(s);
 																	p3.setText(p);
+																	cb3.setVisible(true);
 																	//q3.setText(""+q);
 																}else if(i4.getText().equals("") && p4.getText().equals("")){
 																	i4.setText(s);
 																	p4.setText(p);
+																	cb4.setVisible(true);
 																	//q4.setText(""+q);
 																}else if(i5.getText().equals("") && p5.getText().equals("")){
 																	i5.setText(s);
 																	p5.setText(p);
+																	cb5.setVisible(true);
 																	//q5.setText(""+q);
 																}else if(i6.getText().equals("") && p6.getText().equals("")){
 																	i6.setText(s);
 																	p6.setText(p);
+																	cb6.setVisible(true);
 																	//q6.setText(""+q);
 																}else if(i7.getText().equals("") && p7.getText().equals("")){
 																	i7.setText(s);
 																	p7.setText(p);
+																	cb7.setVisible(true);
 																	//q7.setText(""+q);
 																}else if(i8.getText().equals("") && p8.getText().equals("")){
 																	i8.setText(s);
 																	p8.setText(p);
+																	cb8.setVisible(true);
 																	//q8.setText(""+q);
 																}else if(i9.getText().equals("") && p9.getText().equals("")){
 																	i9.setText(s);
 																	p9.setText(p);
+																	cb9.setVisible(true);
 																	//q9.setText(""+q);
 																}else if(i10.getText().equals("") && p10.getText().equals("")){
 																	i10.setText(s);
 																	p10.setText(p);
+																	cb10.setVisible(true);
 																	//q10.setText(""+q);
 																}else if(i11.getText().equals("") && p11.getText().equals("")){
 																	i11.setText(s);
 																	p11.setText(p);
+																	cb11.setVisible(true);
 																	//q11.setText(""+q);
 																}else if(i12.getText().equals("") && p12.getText().equals("")){
 																	i12.setText(s);
 																	p12.setText(p);
+																	cb12.setVisible(true);
 																	//q12.setText(""+q);
 																}else {
 																	 JOptionPane.showMessageDialog(contentPane,"Limit Reached");  
@@ -850,12 +1007,9 @@ public class Menu extends JFrame {
 															
 															}
 														
-														
-														JLabel lblNewLabel_5 = new JLabel("");
-														lblNewLabel_5.setBounds(899, 492, 145, 27);
-														contentPane.add(lblNewLabel_5);
-														
 														JButton btnNewButton_3 = new JButton("Confirm");
+														btnNewButton_3.setBorder(new LineBorder(new Color(255, 228, 196), 2));
+														btnNewButton_3.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
 														btnNewButton_3.addActionListener(new ActionListener() {
 															public void actionPerformed(ActionEvent e) {
 																gtp = tp1+tp2+tp3+tp4+tp5+tp6+tp7+tp8+tp9+tp10+tp11+tp12;
@@ -869,22 +1023,22 @@ public class Menu extends JFrame {
 																Chef_Page cp =  new Chef_Page(tnum , order , quntity);
 																cp.setVisible(true);
 																
-																order.clear();
-																price.clear();
+//																order.clear();
+//																price.clear();
 															}
 														});
-														btnNewButton_3.setBounds(197, 557, 89, 23);
+														btnNewButton_3.setBounds(193, 557, 123, 34);
 														panel_1.add(btnNewButton_3);
 														
-														JLabel lblNewLabel_6 = new JLabel("Total ");
-														lblNewLabel_6.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
-														lblNewLabel_6.setBounds(717, 488, 154, 31);
-														contentPane.add(lblNewLabel_6);
+														JLabel lblNewLabel_11 = new JLabel("New label");
+														lblNewLabel_11.setIcon(new ImageIcon("G:\\eclipse-workspace\\Rock And Rolls\\Images\\background1\\bg1.jpg"));
+														lblNewLabel_11.setBounds(0, 0, 487, 602);
+														panel_1.add(lblNewLabel_11);
 														
-														JButton btnNewButton_10 = new JButton("Pay Bill");
-														btnNewButton_10.setFont(new Font("Comic Sans MS", Font.BOLD, 15));
-														btnNewButton_10.setBounds(832, 556, 89, 23);
-														contentPane.add(btnNewButton_10);
+														JLabel lblNewLabel_8 = new JLabel("");
+														lblNewLabel_8.setIcon(new ImageIcon("G:\\eclipse-workspace\\Rock And Rolls\\Images\\background1\\bg7.jpg"));
+														lblNewLabel_8.setBounds(29, 0, 1025, 602);
+														contentPane.add(lblNewLabel_8);
 //					JScrollPane sp = new JScrollPane(panel_2 , JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED , JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 														
 //					contentPane.add(sp);
@@ -900,4 +1054,36 @@ public class Menu extends JFrame {
 //		
 		
 	}
+	
+//	public void check(ArrayList a) {
+//		for(int i = 0 ; i < a.size(); i++) {
+//			if(i==0) {
+//				cb1.setSelected(true);
+//			}else if(i==1) {
+//				cb2.setSelected(true);
+//			}else if(i==2) {
+//				cb3.setSelected(true);
+//			}else if(i==3) {
+//				cb4.setSelected(true);
+//			}else if(i==4) {
+//				cb5.setSelected(true);
+//			}else if(i==5) {
+//				cb6.setSelected(true);
+//			}else if(i==6) {
+//				cb7.setSelected(true);
+//			}else if(i==7) {
+//				cb8.setSelected(true);
+//			}else if(i==8) {
+//				cb9.setSelected(true);
+//			}else if(i==9) {
+//				cb10.setSelected(true);
+//			}else if(i==10) {
+//				cb11.setSelected(true);
+//			}else if(i==11) {
+//				cb12.setSelected(true);
+//			}else {
+//				JOptionPane.showMessageDialog(contentPane, "Order Completed");
+//			}
+//		}
+//	}
 }

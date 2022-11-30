@@ -53,6 +53,13 @@ public class Login_Page extends JFrame {
 	 */
 	public Login_Page()  {
 		
+//		try {
+//			Thread.sleep(5000);
+//		} catch (InterruptedException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		}
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 825, 490);
 		contentPane = new JPanel();
@@ -74,9 +81,10 @@ public class Login_Page extends JFrame {
 		JLabel lblNewLabel_2 = new JLabel("LOGIN");
 		lblNewLabel_2.setBounds(0, 0, 145, 34);
 		panel.add(lblNewLabel_2);
-		lblNewLabel_2.setFont(new Font("Courier New", Font.BOLD, 30));
+		lblNewLabel_2.setFont(new Font("Comic Sans MS", Font.BOLD, 30));
 		
 		JLabel lblNewLabel_3 = new JLabel("Table Number");
+		lblNewLabel_3.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
 		lblNewLabel_3.setBounds(41, 58, 116, 22);
 		panel.add(lblNewLabel_3);
 		
@@ -85,6 +93,7 @@ public class Login_Page extends JFrame {
 		panel.add(passwordField);
 		
 		JLabel lblNewLabel_4 = new JLabel("Table Password");
+		lblNewLabel_4.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
 		lblNewLabel_4.setBounds(41, 154, 116, 22);
 		panel.add(lblNewLabel_4);
 		
@@ -126,18 +135,21 @@ public class Login_Page extends JFrame {
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
 		
-//		if(this.isVisible()==true)
+		JLabel lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setIcon(new ImageIcon("G:\\eclipse-workspace\\Rock And Rolls\\Images\\Background\\bg9.jpg"));
+		lblNewLabel_5.setBounds(0, 0, 447, 382);
+		panel.add(lblNewLabel_5);
 		
-		JButton btnNewButton_1 = new JButton("Back");
-		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-//				Home_Page h = new Home_Page();
-//				h.setVisible(true);
-//				setVisible(false);
-			}
-		});
-		btnNewButton_1.setBounds(30, 11, 89, 23);
-		contentPane.add(btnNewButton_1);
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("G:\\eclipse-workspace\\Rock And Rolls\\Images\\background1\\bg11.jpg"));
+		lblNewLabel.setBounds(0, 0, 809, 451);
+		contentPane.add(lblNewLabel);
+		
+		Menu m = new Menu(textField.getText());
+		
+		if(m.isVisible()==true) {
+			this.setVisible(false);
+		}
 	}
 }
 

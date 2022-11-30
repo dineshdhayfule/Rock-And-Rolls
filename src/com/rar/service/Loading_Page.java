@@ -32,21 +32,21 @@ public class Loading_Page extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	void showMe() {
-		Login_Page p1 = new Login_Page();
-		Loading_Page pt = new Loading_Page();
-		try {
-			Thread.sleep(3000);
-			System.out.println("Strted ");
-			p1.setVisible(true);
-			pt.setVisible(false);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+//	void showMe() {
+//		Login_Page p1 = new Login_Page();
+//		Loading_Page pt = new Loading_Page();
+//		try {
+//			Thread.sleep(3000);
+//			System.out.println("Strted ");
+//			p1.setVisible(true);
+//			pt.setVisible(false);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//	}
 	public Loading_Page() {
-		showMe();
+//		showMe();
 //		class tr extends Thread{
 //			
 //			public void run(){
@@ -77,6 +77,9 @@ public class Loading_Page extends JFrame {
 		
 		ImageIcon gif = new ImageIcon(this.getClass().getResource("/BRAR.gif"));
 		lblNewLabel.setIcon(gif);
+		
+		Login_Page lp = new Login_Page();
+		lp.setVisible(true);
 	//	setUndecorated(true);
 		
 		
